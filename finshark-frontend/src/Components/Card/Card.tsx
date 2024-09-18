@@ -1,24 +1,25 @@
 import React from 'react'
 import './Card.css'
+import { CompanySearch } from '../../company';
 
 interface Props {
-    companyName : string;
-    ticker : string;
-    price : number
+    id : string ;
+    searchResult : CompanySearch;
+
 }
 
-const Card: React.FC<Props>= ({companyName , ticker, price}: Props) : JSX.Element => {
+const Card: React.FC<Props>= ({id, searchResult}: Props) : JSX.Element => {
   return (
     
     <>
     <div className="card">
-        <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg" />
+        <img alt='company logo' />
         <div className="details">
-            <h2>{companyName} ({ticker})</h2>
-            <p>${price}</p>
+            <h2>{searchResult.name} ({searchResult.symbol})</h2>
+            <p>{searchResult.currency}</p>
         </div>
         <p className="info">
-            Lorem Ipsum
+            {searchResult.exchangeShortName} - {searchResult.stockExchange}
         </p>
     </div>
     
