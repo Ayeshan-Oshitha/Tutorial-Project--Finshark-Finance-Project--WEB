@@ -26,11 +26,12 @@ function App() {
        console.log(searchResult);
        
   }
-  
+
   return (
     <div className="App">
 
       <Search onClick={onClick} search={search} handleChange={handleChange} />
+      {serverError && <h1>{serverError}</h1> }
       |<CardList />
 
     </div>
