@@ -14,7 +14,7 @@ const Card: React.FC<Props>= ({id, searchResult, onPortfolioCreate }: Props) : J
     
     <>
     <div className="card">
-        <img alt='company logo' />
+        {/* <img alt='company logo' /> */}
         <div className="details">
             <h2>{searchResult.name} ({searchResult.symbol})</h2>
             <p>{searchResult.currency}</p>

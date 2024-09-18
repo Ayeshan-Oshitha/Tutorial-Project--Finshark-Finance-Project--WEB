@@ -12,8 +12,6 @@ const AddPortfolio = ({onPortfolioCreate , symbol}: Props) => {
             <input readOnly={true} hidden={true} value={symbol} />
             <button type='submit'>Add</button>
 
-
-
         </form>
     
     </>
