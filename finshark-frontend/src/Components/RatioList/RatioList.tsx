@@ -25,6 +25,7 @@ const RatioList = ({config, data}: Props) => {
                     </div>
 
                     <div className="inline-flex items-center text-base font-semibold text-gray-900">
+                        {console.log("Rendered balance sheet data is", data)}
                         {row.render(data)}
                     </div>
                 </div>
